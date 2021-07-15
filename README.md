@@ -6,6 +6,11 @@ Automated Web UI test example
 
 1. Python 3.8+
 
+Additional requirements for running the sample tests:
+
+1. Chromium / Chrome
+1. A matching Chromedriver
+
 
 ## Installation
 
@@ -18,7 +23,7 @@ Automated Web UI test example
 
 ## Execution
 
-To run the target Web site:
+### Web site
 
 1. Enter the virtual environment.
 1. Run the Web server
@@ -30,3 +35,16 @@ To run the target Web site:
 Target Web pages:
 
 1. Hidden element exception: http://localhost:5000/hidden_element
+
+### Tests
+
+1. Enter the virtual environment.
+1. Change to the `tests/` directory.
+1. Run the desired test script
+   ```shell
+   python DESIRED_TEST_SCRIPT.py
+   ```
+
+Test scripts:
+
+1. Hidden element exception: test_hidden_element.py
