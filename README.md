@@ -30,11 +30,12 @@ Additional requirements for running the sample tests:
    ```shell
    FLASK_APP=main fsk run
    ```
-1. Now the Web site is available at http://localhost:5000
+1. Now the Website is available at http://localhost:5000
 
 Target Web pages:
 
 1. Hidden element exception: http://localhost:5000/hidden_element
+1. Hidden element exception 2 (5 pages in total): http://localhost:5000/hidden_element2
 
 ### Tests
 
