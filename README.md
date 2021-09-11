@@ -50,3 +50,4 @@ Target Web pages:
 Test scripts:
 
 1. Hidden element exception: test_hidden_element.py
+2. Stale element exception: test_stale_element.py

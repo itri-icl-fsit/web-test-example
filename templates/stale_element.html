@@ -21,6 +21,7 @@
     <script type="application/javascript">
         arrStatus = [false, false, false, false, false, false, false, false];
         arrVals = [0, 0, 0, 0, 0, 0, 0, 0];
+        refreshCnt = 0;
 
         function showRecords() {
             $('#main-table tbody tr').remove();
@@ -39,7 +40,17 @@
                 }
             }
             showRecords();
-            window.setTimeout(showRecordsTimer, (5+ Math.random() * 10) * 100);
+            if (refreshCnt <= 300) {
+                if (refreshCnt <= 100) {
+                    // higher refreshing rates
+                    window.setTimeout(showRecordsTimer, (2 + Math.random() * 4) * 100);
+                }
+                else {
+                    // lower refreshing rates
+                    window.setTimeout(showRecordsTimer, (5 + Math.random() * 20) * 100);
+                }
+                refreshCnt++;
+            }
         }
 
         function clicked(i) {
@@ -70,7 +81,8 @@
 
     <div class="card">
         <div class="card-header">Task</div>
-        <div class="card-body">Click through all the buttons on the right.</div>
+        <div class="card-body">Click through all the buttons on the right.<br />
+        <em>Note: </em> This page is intentionally designed to increase the occurrences of stale-element exception with the cost of a bad user experience.</div>
     </div>
 </div>
 
