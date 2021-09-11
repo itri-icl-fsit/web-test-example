@@ -28,14 +28,15 @@ Additional requirements for running the sample tests:
 1. Enter the virtual environment.
 1. Run the Web server
    ```shell
-   FLASK_APP=main fsk run
+   FLASK_APP=main flask run
    ```
 1. Now the Website is available at http://localhost:5000
 
 Target Web pages:
 
 1. Hidden element exception: http://localhost:5000/hidden_element
-1. Hidden element exception 2 (5 pages in total): http://localhost:5000/hidden_element2
+2. Hidden element exception 2 (5 pages in total): http://localhost:5000/hidden_element2
+3. Stale element exception: http://localhost:5000/stale_element
 
 ### Tests
 

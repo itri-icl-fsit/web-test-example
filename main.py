@@ -19,3 +19,8 @@ def get_hidden_element2():
     clear = request.args.get('clear')
     return render_template('hidden_element2.html', page_no=page_no, clear=clear,
                            current_url=url_for('get_hidden_element2'))
+
+
+@app.route('/stale_element', methods=['GET'])
+def get_stale_element():
+    return render_template('stale_element.html')
