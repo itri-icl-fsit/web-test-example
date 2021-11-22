@@ -1,6 +1,9 @@
 # Usage
 
-## repeat_action()
+## Stale Element Function
+
+### Main Function
+
 - def repeat_action(action, driver, dict_arg, attempts)
   - ``action``: a function which do some sequence action (Function)
   - ``driver``: Selenium Webdriver
@@ -31,7 +34,7 @@ def custom_action(driver):
 repeat_action(custom_action, driver, {}, 5)
 ```
 
-## Other function
+### Other function
 
 - def click_action(driver, dict_arg):
   - ``driver``: Selenium Webdriver
@@ -41,22 +44,6 @@ repeat_action(custom_action, driver, {}, 5)
     ```python
     repeat_action(click_action, driver, {'click': '#target_id'}, 5)
     ```
-- def click_hidden_by_selector(driver, dict_arg):
-  - It's a special function for **hidden element issue**, implemented for those covered element.
-  
-    - You can use some "combo" like ``custom_action`` with this function !
-    - Principle: Use JS function to make web execute.
-  
-  - ``driver``: Selenium Webdriver
-  
-  - ``dict_arg``: Parameter, need contain ``click`` key and its corresponding value is the css_selector of target.
-  
-  - Example: 
-  
-    ```python
-    click_hidden_by_selector(driver, {'click': '#target_id'})
-    ```
-  
 
 **There are some similar function** :
 
@@ -76,6 +63,24 @@ repeat_action(custom_action, driver, {}, 5)
     repeat_action(sendkeys_action, driver, {'sendkeys': '#target_id', 'text': 'words_you_want_to_type_in'}, 5)
     ```
 
+    
+## Hidden Element Issue Related Function
+
+- def click_hidden_by_selector(driver, dict_arg):
+  - It's a special function for **hidden element issue**, implemented for those covered element.
+  
+    - You can use some "combo" like ``custom_action`` with this function !
+    - Principle: Use JS function to make web execute.
+  
+  - ``driver``: Selenium Webdriver
+  
+  - ``dict_arg``: Parameter, need contain ``click`` key and its corresponding value is the css_selector of target.
+  
+  - Example: 
+  
+    ```python
+    click_hidden_by_selector(driver, {'click': '#target_id'})
+    ```
 - def click_hidden_by_xpath(driver, dict_arg):
   - It's the xpath version, compared to css_selector version.
   
@@ -88,7 +93,6 @@ repeat_action(custom_action, driver, {}, 5)
     ```python
     click_hidden_by_xpath(driver, {'click': "//select/option[text()='Click Me!']"})
     ```
-    
 
 # Feature
 
